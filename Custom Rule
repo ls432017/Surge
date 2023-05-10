@@ -1,0 +1,64 @@
+#!name=Custom Rule
+#!desc=Skip proxy on particular clients
+
+[Rule]
+# Proxy
+PROCESS-NAME,v2ray,DIRECT
+PROCESS-NAME,ss-local,DIRECT
+# Download
+PROCESS-NAME,aria2c,DIRECT
+PROCESS-NAME,fdm,DIRECT
+PROCESS-NAME,Folx,DIRECT
+PROCESS-NAME,NetTransport,DIRECT
+PROCESS-NAME,Thunder,DIRECT
+PROCESS-NAME,Transmission,DIRECT
+PROCESS-NAME,uTorrent,DIRECT
+PROCESS-NAME,WebTorrent,DIRECT
+PROCESS-NAME,WebTorrent Helper,DIRECT
+# > Tencent Weiyun
+PROCESS-NAME,Weiyun,DIRECT
+# > Baidu disk
+PROCESS-NAME,baidunetdisk,DIRECT
+# > bt
+DOMAIN-KEYWORD,announce,DIRECT
+DOMAIN-KEYWORD,torrent,DIRECT
+DOMAIN-KEYWORD,tracker,DIRECT
+DOMAIN-SUFFIX,smtp,DIRECT
+DOMAIN-KEYWORD,aria2,DIRECT
+URL-REGEX,(Subject|HELO|SMTP),DIRECT
+# > 迅雷
+URL-REGEX,(.?)(xunlei|sandai|Thunder|XLLiveUD)(.),DIRECT
+DOMAIN-SUFFIX,xunlei.com,DIRECT
+PROCESS-NAME,DownloadService,DIRECT
+# 百度
+URL-REGEX,(api|ps|sv|offnavi|newvector|ulog\.imap|newloc)(\.map|)\.(baidu|n\.shifen)\.com,DIRECT
+# Apple_CDN
+DOMAIN,aod.itunes.apple.com,DIRECT
+DOMAIN,api.smoot.apple.cn,DIRECT
+DOMAIN,music.apple.com,DIRECT
+DOMAIN,mvod.itunes.apple.com,DIRECT
+# > App Store
+USER-AGENT,com.apple.appstored*,DIRECT
+PROCESS-NAME,storedownloadd,DIRECT
+DOMAIN-SUFFIX,mzstatic.com,DIRECT
+DOMAIN,iosapps.itunes.apple.com,DIRECT
+DOMAIN,osxapps.itunes.apple.com,DIRECT
+USER-AGENT,App%20Store*,DIRECT
+USER-AGENT,MacAppStore*,DIRECT
+USER-AGENT,%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0*,DIRECT
+# > Update
+DOMAIN,supportdownload.apple.com,DIRECT
+DOMAIN,appldnld.apple.com,DIRECT
+DOMAIN,swcdn.apple.com,DIRECT
+DOMAIN,apptrailers.itunes.apple.com,DIRECT
+DOMAIN,updates-http.cdn-apple.com,DIRECT
+# > Map
+DOMAIN-SUFFIX,ls.apple.com,DIRECT
+DOMAIN,gs-loc-cn.apple.com,DIRECT
+# PayPal
+USER-AGENT,PayPal*,DIRECT
+DOMAIN-KEYWORD,paypal,DIRECT
+DOMAIN-SUFFIX,paypal.com,DIRECT
+DOMAIN-SUFFIX,paypalobjects.com,DIRECT
+# Others
+#DOMAIN-KEYWORD,epic,DIRECT
