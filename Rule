@@ -62,3 +62,4 @@ DOMAIN-SUFFIX,paypal.com,DIRECT
 DOMAIN-SUFFIX,paypalobjects.com,DIRECT
 # Others
 #DOMAIN-KEYWORD,epic,DIRECT
+DOMAIN-SUFFIX,bankofamerica.com,DIRECT
