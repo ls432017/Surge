@@ -55,11 +55,6 @@ DOMAIN,updates-http.cdn-apple.com,DIRECT
 # > Map
 DOMAIN-SUFFIX,ls.apple.com,DIRECT
 DOMAIN,gs-loc-cn.apple.com,DIRECT
-# PayPal
-USER-AGENT,PayPal*,DIRECT
-DOMAIN-KEYWORD,paypal,DIRECT
-DOMAIN-SUFFIX,paypal.com,DIRECT
-DOMAIN-SUFFIX,paypalobjects.com,DIRECT
 # Others
 #DOMAIN-KEYWORD,epic,DIRECT
 DOMAIN-SUFFIX,bankofamerica.com,DIRECT
